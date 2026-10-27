@@ -34,7 +34,6 @@ class Parser():
         self.driver = webdriver.Firefox(options=options)
         self.links_list=[]
         self.info_list = []
-        self.all_clocks = [] 
         self.csv_path = "smart_watch.csv"
 
     def __del__(self):
@@ -155,15 +154,3 @@ class Parser():
                 df.insert(0, 'Название модели', model_col)
             
             df.to_csv(self.csv_path, index=False, sep=';', encoding='utf-8-sig')
-
-
-
-
-
-
-
-
-
-
-
-
